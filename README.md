@@ -1,6 +1,5 @@
 # tronwallet-adapter
 
-# TronWallet Adapter
 
 TRON tabanlı cüzdan entegrasyonu ve panel geliştirme projesi.
 
