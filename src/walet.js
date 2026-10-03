@@ -1,4 +1,14 @@
+const wallet = {
+  connected: false,
+  address: null,
+  balance: 0
+};
 
-├── index.js
-├── config.js
-└── wallet.js
+function getWalletStatus() {
+  return wallet;
+}
+
+console.log("Wallet modülü yüklendi");
+console.log(getWalletStatus());
+
+export default wallet;
