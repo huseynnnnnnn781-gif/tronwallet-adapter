@@ -1,8 +1,5 @@
 import config from "./config.js";
 import wallet from "./wallet.js";
-
-import config from "./config.js";
-import wallet from "./wallet.js";
 console.log("TronWallet Adapter Başlatıldı");
 
 const app = {
