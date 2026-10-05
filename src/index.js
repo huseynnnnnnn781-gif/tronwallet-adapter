@@ -1,12 +1,7 @@
 import config from "./config.js";
-import wallet from "./wallet.js";
-console.log("TronWallet Adapter Başlatıldı");
+import wallet, { connectWallet } from "./wallet.js";
 
-const app = {
-  name: "TronWallet Adapter",
-  version: "0.1.0",
-  status: "development"
-};
+console.log("TronWallet Adapter Başlatıldı");
 
 console.log(app);
 
