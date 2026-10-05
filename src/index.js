@@ -26,3 +26,4 @@ console.log(config);
 
 console.log("Wallet:");
 console.log(wallet);
+connectWallet();
