@@ -18,3 +18,4 @@ console.log("Wallet:");
 console.log(wallet);
 
 connectWallet();
+console.log("Adres:", wallet.address);
