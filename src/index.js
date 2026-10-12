@@ -19,3 +19,5 @@ console.log(wallet);
 
 connectWallet();
 console.log("Adres:", wallet.address);
+console.log("Bakiye:", wallet.balance, "TRX");
+
