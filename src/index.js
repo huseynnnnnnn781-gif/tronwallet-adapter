@@ -17,7 +17,22 @@ console.log(config);
 console.log("Wallet:");
 console.log(wallet);
 
-connectWallet();
-console.log("Adres:", wallet.address);
-console.log("Bakiye:", wallet.balance, "TRX");
+  const connectedWallet = await connectWallet();
+
+  console.log("Adres:", connectedWallet.address);
+  console.log("Bakiye:", connectedWallet.balance, "TRX");
+}
+
+startApp();
+
+
+async function startApp() {
+  const connectedWallet = await connectWallet();
+
+  console.log("Adres:", connectedWallet.address);
+  console.log("Bakiye:", connectedWallet.balance, "TRX");
+}
+
+startApp();
+
 
