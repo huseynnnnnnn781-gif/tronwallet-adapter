@@ -17,14 +17,6 @@ console.log(config);
 console.log("Wallet:");
 console.log(wallet);
 
-  const connectedWallet = await connectWallet();
-
-  console.log("Adres:", connectedWallet.address);
-  console.log("Bakiye:", connectedWallet.balance, "TRX");
-}
-
-startApp();
-
 
 async function startApp() {
   const connectedWallet = await connectWallet();
