@@ -7,10 +7,27 @@ async function getTransactions(address) {
   }
 
   try {
-    console.log("Son işlemler alınıyor:", address);
+    const safeAddress = encodeURIComponent(address);
 
-    // TRONGrid API sorgusu buraya eklenecek
-    const transactions = [];
+    const url =
+      `https://api.shasta.trongrid.io/v1/accounts/${safeAddress}/transactions\` +
+      `?only_confirmed=true&limit=5&order_by=block_timestamp,desc`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        accept: "application/json"
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`API hatası: ${response.status}`);
+    }
+
+    const result = await response.json();
+    const transactions = result.data || [];
+
+    console.log("İşlem sayısı:", transactions.length);
 
     return transactions;
   } catch (error) {
